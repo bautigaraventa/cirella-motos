@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { MotosComponent } from './motos/motos.component';
+import { MotoThumbnailComponent } from './moto-thumbnail/moto-thumbnail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MotosComponent
+    MotosComponent,
+    MotoThumbnailComponent
   ],
   imports: [
     BrowserModule
