@@ -1,4 +1,4 @@
-var router=require('express').Router();
+var router = require('express').Router();
 
 router.use('/api/motorbike', require('./motorbike'));
 // router.use('/api/partidos', require('./partido'));
@@ -9,4 +9,4 @@ router.use('/api/motorbike', require('./motorbike'));
 // router.use('/api/arbitros', require('./arbitro'));
 // router.use('/api/torneos', require('./torneo'));
 
-module.exports=router;
+module.exports = router;

@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 
 mongoose.connect('mongodb://localhost/cirella-motos', { useMongoClient: true });
-// require('./models/equipo.js');
+require('./app/models/motorbike.js');
 // require('./models/partido.js');
 // require('./models/evento.js');
 // require('./models/tipo_evento.js');
