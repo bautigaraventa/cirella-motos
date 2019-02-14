@@ -9,10 +9,10 @@
   "author": "Juan Bautista Garaventa",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "cors": "^2.8.4",
-    "express": "^4.16.1",
-    "method-override": "^2.3.10",
-    "mongoose": "^4.12.0"
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "4.x",
+    "method-override": "3.x",
+    "mongoose": "^5.4.12"
   }
 }

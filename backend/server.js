@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(methodOverride());
 
-mongoose.connect('mongodb://localhost/cirella-motos', { useMongoClient: true });
+mongoose.connect('mongodb://localhost/cirella-motos', { useNewUrlParser: true });
 require('./app/models/motorbike.js');
 // require('./models/partido.js');
 // require('./models/evento.js');
@@ -26,7 +26,7 @@ require('./app/models/motorbike.js');
 
 app.use(require('./app/routes'));
 
-var router=express.Router();
+var router = express.Router();
 
 
 app.use(router);

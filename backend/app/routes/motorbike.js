@@ -32,4 +32,38 @@ router.get('/:id', (req, res, next) => {
     });
 });
 
+//Create motorbike
+router.post('/', (req, res) => {
+  const motorbike = new Motorbike({
+    name: req.body.name,
+    year: req.body.year
+  });
+  motorbike.save((err) => {
+    if (err) {
+      res.status(500).send(err);
+    } 
+    else {
+      res.send(motorbike);
+    }
+  });
+});
+
+//Update motorbike
+router.put('/:id', async (req, res) => {
+  // try {
+  //   const update = await Motorbike.findOneAndUpdate({_id: req.params.id}, req.body, (err, doc, resp));
+  //   res.send(doc);  
+  // } catch (error) {
+  //   res.status(500).send(error);
+  // }
+  Motorbike.findOneAndUpdate({_id: req.params.id}, req.body).then(eee => {
+    if (err) {
+      res.status(500).send(err);
+    } else {
+      console.log(eee);
+      res.send(eee);
+    }    
+  });  
+});
+
 module.exports = router;
